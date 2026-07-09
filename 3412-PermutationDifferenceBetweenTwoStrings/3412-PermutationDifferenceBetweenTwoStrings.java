@@ -1,0 +1,14 @@
+// Last updated: 7/9/2026, 9:46:29 AM
+class Solution {
+    public int findPermutationDifference(String s, String t) {
+        int ans=0;
+        for(int i=0;i<s.length();i++){
+            for(int j=0;j<t.length();j++){
+                if(s.charAt(i)==t.charAt(j)){
+                    ans+=Math.abs(i-j);
+                }
+            }
+        }
+        return ans;
+    }
+}
