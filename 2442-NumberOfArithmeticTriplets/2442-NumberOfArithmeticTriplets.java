@@ -1,0 +1,18 @@
+// Last updated: 7/9/2026, 9:47:18 AM
+class Solution {
+    public int arithmeticTriplets(int[] nums, int diff) {
+        int c=0;
+        int r=nums.length-1;
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                for(int k=j+1;k<nums.length;k++){
+                    if(nums[j]-nums[i]==diff && nums[k]-nums[j]==diff){
+                        c++;
+                    }
+                }
+            }
+        }
+        return c;
+        
+    }
+}
