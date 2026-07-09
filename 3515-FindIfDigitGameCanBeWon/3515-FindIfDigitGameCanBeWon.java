@@ -1,0 +1,19 @@
+// Last updated: 7/9/2026, 9:46:23 AM
+class Solution {
+    public boolean canAliceWin(int[] nums) {
+        int sum1=0;
+        int sum2=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]<10)
+            sum1+=nums[i];
+            if(nums[i]>=10)
+            sum2+=nums[i];
+        } 
+        System.out.println(sum1);
+        System.out.println(sum2);
+        if(sum1>sum2||sum2>sum1)
+        return true;
+        else
+        return false;  
+         }
+}
